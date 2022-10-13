@@ -43,6 +43,7 @@ public class StudentController{
 	public List<StudentEntity> getAllStudent(){
 		return stserv.getAllStudent();
 	} 
+	
 
 	//Read a record by Firstname
 	@GetMapping("/getByFirstname")

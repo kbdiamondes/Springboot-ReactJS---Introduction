@@ -27,10 +27,13 @@ public class StudentService {
 	
 	
 	
+	
 	//Read all record from tbl_studen
 	public List<StudentEntity> getAllStudent(){
 		return srepo.findAll();
 	}
+	
+	
 	
 	//R - Read or search student record by Firstname
 	public StudentEntity findByFirstname(String firstname){

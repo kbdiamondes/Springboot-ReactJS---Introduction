@@ -16,11 +16,11 @@ public class StudentEntity {
 	@Id   //specifies that ID is a primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //signifies that this field ID is auto incremented
 	private int id; 
-	
 	private String firstname; 
 	private String lastname; 
 	private String course; 
 	private int yearlevel;
+	
 	
 	public StudentEntity() {}
 	//define the constructor -> right click -> source -> generate from source
@@ -32,6 +32,7 @@ public class StudentEntity {
 		this.course = course;
 		this.yearlevel = yearlevel;
 	}
+	
 	
 	//define the setter and getter methods -> righht click -> source -> generate setter and getter
 
@@ -52,11 +53,14 @@ public class StudentEntity {
 		return lastname;
 	}
 
+	
+	
 	/*
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}*/
 
+	
 	public String getCourse() {
 		return course;
 	}
