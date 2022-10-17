@@ -1,2 +1,2 @@
-INSERT INTO tbl_student (firstname, lastname, course, yearlevel)
-VALUES ('John', 'Doe', 'BSIT', 4); 
+INSERT INTO tbl_course (courseid, code, descr, unit)
+VALUES (25, 'CSIT321', 'Applications Development', 3); 

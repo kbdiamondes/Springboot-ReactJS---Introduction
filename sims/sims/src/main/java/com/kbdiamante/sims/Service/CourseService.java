@@ -36,6 +36,7 @@ public class CourseService {
 			
 			course.setCode(newCourseDetails.getCode());
 			course.setDescr(newCourseDetails.getDescr()); 
+			course.setUnit(newCourseDetails.getUnit());
 			
 			return crepo.save(course); 
 		}catch(NoSuchElementException nex) {

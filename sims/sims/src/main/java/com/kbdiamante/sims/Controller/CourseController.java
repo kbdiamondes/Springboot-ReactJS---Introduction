@@ -25,7 +25,7 @@ public class CourseController {
 	
 	
 	//Create
-	@PostMapping("/insertCourse")
+	@PostMapping("/postCourse")
 	CourseEntity insertCourse(@RequestBody CourseEntity course) {
 		return cserv.insertCourse(course); 
 	}

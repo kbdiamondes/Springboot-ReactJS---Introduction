@@ -31,11 +31,6 @@ public class CourseEntity {
 	}
 	
 	
-	public void setCourseid(int courseid) {
-		this.courseid = courseid;
-	}
-	
-	
 	public String getCode() {
 		return code;
 	}

@@ -1,1 +1,1 @@
-SELECT * FROM tbl_student; 
+SELECT * FROM tbl_course; 

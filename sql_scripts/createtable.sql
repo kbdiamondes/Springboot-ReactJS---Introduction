@@ -1,8 +1,7 @@
-CREATE TABLE tbl_student (
-id int NOT NULL AUTO_INCREMENT, 
-firstname VARCHAR(30),
-lastname VARCHAR(30),
-course VARCHAR(30),
-yearlevel int, 
-PRIMARY KEY (id)
+CREATE TABLE tbl_course (
+courseid int NOT NULL auto_increment, 
+code VARCHAR(30), 
+descr VARCHAR(30), 
+unit int(1),
+PRIMARY KEY (courseid)
 ); 
