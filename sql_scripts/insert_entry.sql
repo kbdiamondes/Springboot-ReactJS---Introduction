@@ -1,2 +1,2 @@
-INSERT INTO tbl_course (courseid, code, descr, unit)
-VALUES (25, 'CSIT321', 'Applications Development', 3); 
+INSERT INTO tbl_course (code, descr, unit)
+VALUES ('CSIT321', 'Applications Development', 3); 

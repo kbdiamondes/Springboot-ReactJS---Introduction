@@ -1,9 +1,13 @@
 package com.kbdiamante.sims.Entity;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,27 +22,37 @@ public class StudentEntity {
 	private int id; 
 	private String firstname; 
 	private String lastname; 
-	private String course; 
+	private String program; 
 	private int yearlevel;
+	
+	@OneToMany(cascade = CascadeType.MERGE)
+	public Set<CourseEntity> course;
 	
 	
 	public StudentEntity() {}
-	//define the constructor -> right click -> source -> generate from source
-	public StudentEntity(int id, String firstname, String lastname, String course, int yearlevel) {
+
+
+	public StudentEntity(int id, String firstname, String lastname, String program, int yearlevel,
+			Set<CourseEntity> course) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
-		this.course = course;
+		this.program = program;
 		this.yearlevel = yearlevel;
+		this.course = course;
 	}
-	
-	
-	//define the setter and getter methods -> righht click -> source -> generate setter and getter
+
 
 	public int getId() {
 		return id;
 	}
+
+	/*
+	public void setId(int id) {
+		this.id = id;
+	}
+	*/
 
 	public String getFirstname() {
 		return firstname;
@@ -47,35 +61,47 @@ public class StudentEntity {
 	/*
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
-	}*/
+	}
+	*/
 
 	public String getLastname() {
 		return lastname;
 	}
 
-	
-	
 	/*
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}*/
 
-	
-	public String getCourse() {
-		return course;
+
+	public String getProgram() {
+		return program;
 	}
 
-	public void setCourse(String course) {
-		this.course = course;
+
+	public void setProgram(String program) {
+		this.program = program;
 	}
+
 
 	public int getYearlevel() {
 		return yearlevel;
 	}
 
+
 	public void setYearlevel(int yearlevel) {
 		this.yearlevel = yearlevel;
-	} 
+	}
+
+
+	public Set<CourseEntity> getCourse() {
+		return course;
+	}
+
+
+	public void setCourse(Set<CourseEntity> course) {
+		this.course = course;
+	}
 	
 	
 	

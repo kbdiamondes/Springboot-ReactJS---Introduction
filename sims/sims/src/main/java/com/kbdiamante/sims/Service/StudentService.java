@@ -55,7 +55,7 @@ public class StudentService {
 			student = srepo.findById(id).get(); //findById() is a pre-defined method
 			
 			//Step 2 - update the record
-			student.setCourse(newStudentDetails.getCourse());
+			student.setProgram(newStudentDetails.getProgram());
 			student.setYearlevel(newStudentDetails.getYearlevel());
 			
 			//Step 3 -  save the information and return the value
